@@ -1,0 +1,28 @@
+spring:
+    mvc:
+        view:
+            prefix: /WEB-INF/jsp/
+            suffix: .jsp
+    jpa:
+        generate-ddl: true
+        show-sql: true
+        hibernate:
+            ddl-auto: update
+    datasource:
+        url: jdbc:h2:file:./spring-security-study
+    jackson:
+        date-format: yyyy-MM-dd'T'HH:mm:ss.SSSXXX
+        time-zone : Asia/Seoul
+#        deserialization:
+#            unwrap-root-value: true
+#        serialization:
+#            wrap-root-value: true
+
+logging:
+    level:
+        xyz.dddog.blog: DEBUG
+
+server:
+    error:
+        whitelabel:
+            enabled: false
