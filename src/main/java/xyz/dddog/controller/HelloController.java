@@ -10,8 +10,12 @@ public class HelloController {
 	public String index() {
 		return "index";
 	}
-	@RequestMapping({"/hello"})
-	public String hello() {
-		return "hello";
+	@RequestMapping({"/user/hello"})
+	public String userHello() {
+		return "/user/hello";
+	}
+	@RequestMapping({"/admin/hello"})
+	public String adminHello() {
+		return "/admin/hello";
 	}
 }

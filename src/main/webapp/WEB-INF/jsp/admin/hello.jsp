@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h4>ADMIN Page</h4>
 Hello, <b><c:out value="${pageContext.request.remoteUser}"/></b>
 
 <c:url var="logoutUrl" value="/logout"/>

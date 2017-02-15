@@ -11,11 +11,18 @@
 <body>
 
 <sec:authorize access="isAnonymous()">
-	<a href="/login">로그인</a>
+	<a href="/login">로그인</a><br>
+	<a href="/registerForm">회원가입</a>
 </sec:authorize>
 <sec:authorize access="isAuthenticated()">
 	Logged in user: <span> <sec:authentication property="name"/> </span> |					
     Roles: <span> <sec:authentication property="principal.authorities"/> </span>
+    <br>
+    <br>
+    <a href="/user/hello">USER Page로 가기</a><br>
+    <a href="/admin/hello">ADMIN Page로 가기</a>
+    
+    
 	<c:url var="logoutUrl" value="/logout"/>
 	<form class="form-inline" action="${logoutUrl}" method="post">
 	  <input type="submit" value="Log out" />
