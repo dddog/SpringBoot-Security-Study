@@ -29,9 +29,13 @@
 		<label for="password">비밀번호</label>
 		<input type="password" id="password" name="password"/>	
 	</p>
-	<input type="hidden"                        
+	<p>
+		Remember Me : <input type="checkbox" name="remember-me" value="true" />
+	</p>
+	<%-- <input type="hidden"                        
 		name="${_csrf.parameterName}"
-		value="${_csrf.token}"/>
+		value="${_csrf.token}"/> --%>
+	<sec:csrfInput />
 	<button type="submit" class="btn">Log in</button>
 </form>
 </body>
